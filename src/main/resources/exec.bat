@@ -1,0 +1,1 @@
+echo "This is why we need bat file">file.out
