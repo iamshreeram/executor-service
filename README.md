@@ -1,2 +1,2 @@
 # executor-service
-Rest service to invoke and command or script in your machine
+Rest service to invoke any OS level command or run scripts that are located in your machine
