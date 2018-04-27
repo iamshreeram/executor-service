@@ -20,7 +20,8 @@ public class InitiateController {
         Process p;
         try {
                 List<String> cmdList = new ArrayList<String>();
-                cmdList.add(InitiateController.class.getResource("/script.bat").getPath());
+                cmdList.add(getClass().getResource("/script.bat").getPath());
+                //cmdList.add(InitiateController.class.getResource("dir").getPath());
                 ProcessBuilder pb = new ProcessBuilder(cmdList);
                 p = pb.start();
                 BufferedReader reader=new BufferedReader(new InputStreamReader(p.getInputStream()));
