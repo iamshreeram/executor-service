@@ -3,6 +3,7 @@ package us.shreeram.executorservice.initiate;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.text.SimpleDateFormat;
@@ -19,7 +20,7 @@ public class InitiateController {
         Process p;
         try {
                 List<String> cmdList = new ArrayList<String>();
-                cmdList.add("script.bat");
+                cmdList.add(InitiateController.class.getResource("/script.bat").getPath());
                 ProcessBuilder pb = new ProcessBuilder(cmdList);
                 p = pb.start();
                 BufferedReader reader=new BufferedReader(new InputStreamReader(p.getInputStream()));
