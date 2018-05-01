@@ -10,8 +10,6 @@ public class Executor {
 
         SpringApplication.run(Executor.class,args);
         //System.out.print("This is a sample app");
-
-
     }
 }
 
