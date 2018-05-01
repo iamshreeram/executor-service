@@ -5,4 +5,3 @@ jdk:
   - oraclejdk9
 os:
   - linux
-  - osx
