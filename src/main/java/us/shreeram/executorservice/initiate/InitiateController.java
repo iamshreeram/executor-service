@@ -3,27 +3,28 @@ package us.shreeram.executorservice.initiate;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class InitiateController {
     @RequestMapping("/start")
-    public String initiateScript() {
+    public String initiateScript(
+            @RequestParam("scriptname") String scriptName,
+            @RequestHeader("path") String path
+    ) {
+        final List<String> cmdList = new ArrayList<String>();
+        final String script;
+        script = path+scriptName;
+        cmdList.add(script);
 
-        Process p;
+        final ProcessBuilder pb = new ProcessBuilder(cmdList);
         try {
-                List<String> cmdList = new ArrayList<String>();
-                cmdList.add(getClass().getResource("/script.bat").getPath());
-                //cmdList.add(InitiateController.class.getResource("dir").getPath());
-                ProcessBuilder pb = new ProcessBuilder(cmdList);
-                p = pb.start();
+                pb.redirectErrorStream(true);
+                Process p = pb.start();
                 BufferedReader reader=new BufferedReader(new InputStreamReader(p.getInputStream()));
                 String line;
                 while((line = reader.readLine()) != null) {
@@ -34,6 +35,6 @@ public class InitiateController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        return "Started the backend process.";
+        return "Started the backend" +  script +" process.";
     }
 }
