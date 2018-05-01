@@ -33,3 +33,5 @@ Snapshot version of Jar would have been created in target folder. Run it with be
 ```
 java -jar executorservice-1.0-SNAPSHOT.jar
 ```
+
+### Next updates
