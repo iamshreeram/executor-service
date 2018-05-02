@@ -1,5 +1,7 @@
 
 [![Build Status](https://travis-ci.org/iamshreeram/executor-service.svg?branch=master)](https://travis-ci.org/iamshreeram/executor-service)
+[![codecov](https://codecov.io/gh/iamshreeram/executor-service/branch/master/graph/badge.svg)](https://codecov.io/gh/iamshreeram/executor-service)
+
 
 # executor-service
 
