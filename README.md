@@ -48,3 +48,4 @@ java -jar executorservice-1.0-SNAPSHOT.jar
 * Accept multiple arguments from user and dynamically pass it to script
 * Enable the service to run kernel level commands and return the output
 * Host a Single page app to view the details of OS and status.
+* Codecov set up is in progress.

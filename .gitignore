@@ -162,5 +162,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Other scala Files
+*.scala
 
 # End of https://www.gitignore.io/api/java,maven,windows,intellij,intellij+iml
