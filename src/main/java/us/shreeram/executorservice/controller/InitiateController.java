@@ -1,4 +1,4 @@
-package us.shreeram.executorservice.initiate;
+package us.shreeram.executorservice.controller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,10 +7,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import us.shreeram.executorservice.business.ScriptExecutor;
 
 @RestController
 public class InitiateController {
+
+    @Autowired
+    private ScriptExecutor se;
 
     // Creating a /start request mapping
     @RequestMapping("/start")
@@ -29,6 +36,11 @@ public class InitiateController {
         // Adding commands to list
         cmdList.add(script);
 
+        //ScriptExecutor se = new ScriptExecutor();
+        String status = se.executeScript(cmdList);
+        return status;
+
+        /*
         final ProcessBuilder pb = new ProcessBuilder(cmdList);
         try {
                 pb.redirectErrorStream(true);
@@ -50,5 +62,6 @@ public class InitiateController {
                 e.printStackTrace();
                 return script +" process failed to start.";
             }
+            */
     }
 }
