@@ -1,6 +1,9 @@
 
 [![Build Status](https://travis-ci.org/iamshreeram/executor-service.svg?branch=master)](https://travis-ci.org/iamshreeram/executor-service)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/us.shreeram.applications/executorservice/badge.svg)](https://maven-badges.herokuapp.com/maven-central/us.shreeram.applications/executorservice)
 [![codecov](https://codecov.io/gh/iamshreeram/executor-service/branch/master/graph/badge.svg)](https://codecov.io/gh/iamshreeram/executor-service)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+
 
 
 # executor-service
