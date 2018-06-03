@@ -1,4 +1,4 @@
-package us.shreeram.executorservice.business;
+package us.shreeram.applications.executorservice.business;
 
 import org.springframework.stereotype.Component;
 

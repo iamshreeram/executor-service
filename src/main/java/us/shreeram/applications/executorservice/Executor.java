@@ -1,4 +1,4 @@
-package us.shreeram.executorservice;
+package us.shreeram.applications.executorservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -4,16 +4,53 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>us.shreeram</groupId>
+    <groupId>us.shreeram.application</groupId>
     <artifactId>executorservice</artifactId>
     <version>1.0-SNAPSHOT</version>
+	
+	<!-- Details of project -->
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>Rest application to execute commands in any machine</description>
+	<url>https://github.com/iamshreeram/executor-service</url>
 
+	<licenses>
+        <license>
+            <name>Apache2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+	
+	
+	<!-- Details of Developer -->
+	<developers>
+        <developer>
+            <email>shreeram.v@live.com</email>
+            <name>Shreeram Vaidhyanathan</name>
+            <url>https://shreeram.us</url>
+            <id>iamshreeram</id>
+        </developer>
+	</developers>
+
+	<!-- Details of Source Code Management -->
+	<scm>
+		<connection>scm:git:git://github.com/iamshreeram/executor-service.git</connection>
+		<developerConnection>scm:git:ssh://github.com:iamshreeram/executor-service.git</developerConnection>
+		<url>http://github.com/iamshreeram/executor-service/tree/master</url>
+	</scm>
+
+
+	
+	<!-- Encoding Properties -->
+	<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<!-- Dependency info -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.1.RELEASE</version>
     </parent>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -29,6 +66,19 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+	
+	<!-- URL for Maven central repository -->
+	<distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+	</distributionManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -36,7 +86,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.0.1.RELEASE</version>
                 <configuration>
-                    <mainClass>us.shreeram.executorservice.Executor</mainClass>
+                    <mainClass>us.shreeram.applications.executorservice.Executor</mainClass>
                     <layout>JAR</layout>
                 </configuration>
                 <executions>

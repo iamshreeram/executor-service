@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: us.shreeram.executorservice.Executor
+Main-Class: us.shreeram.applications.executorservice.Executor
 
