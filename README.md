@@ -41,8 +41,27 @@ Note : Ensure Maven is configured in your system path
 Snapshot version of Jar would have been created in target folder. Run it with below command
 
 ```
-java -jar executorservice-1.0-SNAPSHOT.jar
+java -jar executorservice-1.0.jar
 ```
+
+### How to import as dependency
+
+For Maven,
+
+```xml
+<dependency>
+  <groupId>us.shreeram.applications</groupId>
+  <artifactId>executorservice</artifactId>
+  <version>1.0</version>
+</dependency>
+```
+
+For SBT,
+
+```
+libraryDependencies += "us.shreeram.applications" % "executorservice" % "1.0"
+```
+
 
 ### Next updates
 
