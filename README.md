@@ -23,7 +23,7 @@ Java
 Maven
 ```
 
-### How to build the application
+### Build the application
 
 A step by step process to build the code to JAR
 
@@ -35,7 +35,7 @@ Extract the folder. Get into the folder do `mvn clean install` where pom.xml is 
 
 Note : Ensure Maven is configured in your system path
 
-### How to run the application
+### Run the application
 
 Snapshot version of Jar would have been created in target folder. Run it with below command
 
@@ -43,7 +43,7 @@ Snapshot version of Jar would have been created in target folder. Run it with be
 java -jar executorservice-1.0.jar
 ```
 
-### How to import as dependency
+### Import as dependency
 
 For Maven,
 
