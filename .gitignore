@@ -165,4 +165,7 @@ $RECYCLE.BIN/
 # Other scala Files
 *.scala
 
+.classpath
+.project
+.settings/
 # End of https://www.gitignore.io/api/java,maven,windows,intellij,intellij+iml
